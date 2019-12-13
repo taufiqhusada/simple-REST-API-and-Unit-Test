@@ -41,7 +41,7 @@ describe('Books', () => {
                 "id": 123456789, // number
                 "title": "The Title", // string
                 "author": "The Author", // string
-                "isbn": "ISBN Code", // string
+                "isbn": "ISBN 90-70002-34-5", // string
                 "publishedOn": 2019, // number
                 "numberOfPages": 188 // number
             });
@@ -67,35 +67,12 @@ describe('Books', () => {
 
     // Test the /POST route
     describe('/POST book', () => {
-        it('it should not POST a book without id, title, isbn, and number of pages field', (done) => {
-            let book = {
-                "author": "The Author", 
-                "publishedOn": 2019, 
-            }
-            chai.request(app)
-                .post('/books')
-                .send(book)
-                .end((err, res) => {
-                        res.should.have.status(200);
-                        res.body.should.be.a('object');
-                        res.body.should.have.property('errors');
-                        res.body.errors.should.have.property('id');
-                        res.body.errors.id.should.have.property('kind').eql('required');
-                        res.body.errors.should.have.property('title');
-                        res.body.errors.title.should.have.property('kind').eql('required');
-                        res.body.errors.should.have.property('isbn');
-                        res.body.errors.isbn.should.have.property('kind').eql('required');
-                        res.body.errors.should.have.property('numberOfPages');
-                        res.body.errors.numberOfPages.should.have.property('kind').eql('required');
-                    done();
-                });
-        });
         it('it should POST a book ', (done) => {
             let book = {
                 "id": 123456789, // number
                 "title": "The Title", // string
                 "author": "The Author", // string
-                "isbn": "ISBN Code", // string
+                "isbn": "ISBN 90-70002-34-5", // string
                 "publishedOn": 2019, // number
                 "numberOfPages": 188 // number
             }
@@ -123,7 +100,7 @@ describe('Books', () => {
                 "id": 123456789, // number
                 "title": "The Title", // string
                 "author": "The Author", // string
-                "isbn": "ISBN Code", // string
+                "isbn": "ISBN 90-70002-34-5", // string
                 "publishedOn": 2019, // number
                 "numberOfPages": 188 // number
             });
@@ -134,7 +111,7 @@ describe('Books', () => {
                     "id": 123456789, // number
                     "title": "The Title edited", // string
                     "author": "The Author edited", // string
-                    "isbn": "ISBN Code", // string
+                    "isbn": "ISBN 90-70002-34-5", // string
                     "publishedOn": 2019, // number
                     "numberOfPages": 188 // number
                 })
@@ -156,7 +133,7 @@ describe('Books', () => {
                 "id": 123456789, // number
                 "title": "The Title", // string
                 "author": "The Author", // string
-                "isbn": "ISBN Code", // string
+                "isbn": "ISBN 90-70002-34-5", // string
                 "publishedOn": 2019, // number
                 "numberOfPages": 188 // number
             });
