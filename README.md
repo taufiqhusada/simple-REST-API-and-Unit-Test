@@ -10,7 +10,7 @@ To get the service ready you have to:
 To run the service you have to:
 1. Make sure the prerequisites are met
 2. Open terminal and go to the directory
-3. Type "npm install" to install all depedencies
-4. Open file config/keys.js and put the connection string from your database in Mongo Atlas
-5. To run the API service, type "node app"
-6. To run the unit test, type "npm run test"
+3. Type `npm install` to install all depedencies
+4. Open file `config/keys.js` and put the connection string from your database in Mongo Atlas
+5. To run the API service, type `node app`
+6. To run the unit test, type `npm run test`
